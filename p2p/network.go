@@ -5,8 +5,8 @@ const (
 	ProtocolVersion = 1
 )
 
-// Messenger - the main entry point for p2p
-type Messenger struct {
+// Network - the main entry point for p2p
+type Network struct {
 	Orchestrator Orchestrator
 	Consumer     Consumer
 	Broadcaster  Broadcaster

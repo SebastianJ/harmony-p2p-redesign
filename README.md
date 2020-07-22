@@ -109,7 +109,7 @@ This repo contains a very simplistic and evolving proof of concept of how a rede
 
 It centers around a set of actors that are responsible for certain responsibilities in the p2p lifecycle:
 
-- **Messenger** - the main interaction and initialization point for p2p communication
+- **Network** - the main interaction and initialization point for p2p communication
 - **Orchestrator** - configures pubsub, protocol wiring etc
 - **Subscriber** - subscribes to topics to receive p2p messages
 - **Consumer** - consumes messages from a given topic
