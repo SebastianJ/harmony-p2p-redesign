@@ -103,3 +103,15 @@ Phase 1 and 2 would have minimal external impact on validators since they would 
 Phase 3 would break backwards compatibility and would require extensive coordination with the validators.
 
 **Phase 3 (if approved) should only go live after extremely thorough testing on LRTN and after detailed communication with the external validator community explaining the upcoming protocol change.**
+
+## Proof of concept
+This repo contains a very simplistic and evolving proof of concept of how a redesigned p2p layer *might* look like.
+
+It centers around a set of actors that are responsible for certain responsibilities in the p2p lifecycle:
+
+- Messenger - the main interaction and initialization point for p2p communication
+- Orchestrator - configures pubsub, protocol wiring etc
+- Subscriber - subscribes to topics to receive p2p messages
+- Consumer - consumes messages from a given topic
+- Processor - processors act upon received messages and perform work related to the types of message they receive
+- Broadcaster - broadcasts p2p messages
