@@ -20,13 +20,13 @@ func TestMessageConsumption(t *testing.T) {
 	mockConsumer := new(consumerMock)
 	mockConsumer.On("Consume").Return()
 
-	consumer := ConsumerSupervisor{
+	supervisor := Supervisor{
 		Consumers: []p2p.Consumer{
 			mockConsumer,
 		},
 	}
 
-	consumer.Consume()
+	supervisor.Consume()
 
 	mockConsumer.AssertExpectations(t)
 }
